@@ -13,6 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import Contact from './components/contact';
+import About from './components/About';
 
 function App() {
   const btnHandle = () => toast.success("Successfull!!");
@@ -32,6 +33,7 @@ function App() {
               <Route path="/add-employee" component={AddEmployee} exact />
               <Route path="/view-employees" component={AllEmployees} exact />
               <Route path="/contact" component={Contact} exact />
+              <Route path="/about" component={About} exact />
 
             </Col>
           </Row>
