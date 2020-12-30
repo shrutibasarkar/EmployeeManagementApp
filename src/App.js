@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { Button, Container, Row, Col } from "reactstrap";
-import { ToastContainer, toast } from "react-toastify";
+import {  Container, Row, Col } from "reactstrap";
+import { ToastContainer } from "react-toastify";
 import Home from './components/Home';
 import Header from './components/Header';
 import AllEmployees from './components/AllEmployees';
@@ -9,14 +9,13 @@ import AddEmployee from './components/AddEmployee';
 import Menu from './components/Menu';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Contact from './components/contact';
 import About from './components/About';
 
 function App() {
-  const btnHandle = () => toast.success("Successfull!!");
+  
   return (
     <div>
       <Router>

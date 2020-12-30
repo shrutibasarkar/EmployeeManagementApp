@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect,useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Container } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import base_url from './../API/springbootapi';
@@ -42,7 +42,7 @@ const addEmployeesToServer=(data)=>{
             <Form onSubmit={handleForm}>
                 <FormGroup>
                     <Label for="id">Employee ID</Label>
-                    <Input type="text" name="EmployeeID" id="id" placeholder="Enter Employee ID" onChange={
+                    <Input required type="text" name="EmployeeID" id="id" placeholder="Enter Employee ID" onChange={
                         (e)=>{
                             setEmployee({...employee,id:e.target.value })
                         }
@@ -50,7 +50,7 @@ const addEmployeesToServer=(data)=>{
                 </FormGroup>
                 <FormGroup>
                     <Label for="name">Employee Name</Label>
-                    <Input type="text" name="EmployeeName" id="name" placeholder="Enter Employee Name" onChange={
+                    <Input required type="text" name="EmployeeName" id="name" placeholder="Enter Employee Name" onChange={
                         (e)=>{
                             setEmployee({...employee,name:e.target.value })
                         }
@@ -58,7 +58,7 @@ const addEmployeesToServer=(data)=>{
                 </FormGroup>
                 <FormGroup>
                     <Label for="description">Employee Description</Label>
-                    <Input type="textarea" name="description" id="EmpDescription" onChange={
+                    <Input required type="textarea" name="description" id="EmpDescription" onChange={
                         (e)=>{
                             setEmployee({...employee,description:e.target.value })
                         }

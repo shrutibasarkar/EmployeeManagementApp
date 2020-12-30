@@ -15,7 +15,6 @@ const AllEmployees = () => {
 const getAllEmployeesFromServer=()=>{
     axios.get(`${base_url}/employees`).then(
         (response)=>{
-            console.log(response.data);
             setEmployees(response.data)
         },
         (error)=>{
@@ -36,7 +35,7 @@ useEffect(()=>{
 
 //function is called to update the list of employees when employee is deleted 
     const updateEmployeeList = (id)=>{
-        setEmployees(employees.filter((emp)=>emp.id!=id));
+        setEmployees(employees.filter((emp)=>emp.id!==id));
     } 
     return (
 
